@@ -40,5 +40,8 @@ Following shows how to implement it by Azure Data Factory.
 ![image](https://github.com/RicZhou-MS/DocLibrary/assets/75886466/3d02e0b1-8f40-4e78-82da-5bf1cf850d32)
 17. Switch back to Pipeline tab and click **Source** tab of **Copy Data** activity. set dynamic value `@item().sourefile` at **ParaSourceFileWithPath** of Dataset properties (NOTE: the **sourcefile** in `@item().sourefile` maps to the **sourcefile** column name of Lookup activity output).
 ![image](https://github.com/RicZhou-MS/DocLibrary/assets/75886466/59e4227b-a5a9-4f46-978e-32368f4f6505)
- 
+18. Similarly to click **Sink** tab of **Copy Data** activity. set dynamic value `@item().targetname` at **ParamNewFileName** of Dataset properties (NOTE: the **targetname** in `@item().targetname` maps to the **targetname** column name of Lookup activity output), as well as set dynamic value `@substring(item().sourefile,0,lastindexof(item().sourefile,'/'))` at **ParamNewFolderName** property.
+![image](https://github.com/RicZhou-MS/DocLibrary/assets/75886466/0f0c9b50-eeea-4bc5-ac80-b84b15b699f0)
+19. Click **Publish all** to save the pipleline configuration, and click **Debug** to test if the copy can be performed successfully as expected. 
+![image](https://github.com/RicZhou-MS/DocLibrary/assets/75886466/ee51ccd1-1804-4ebc-bcaf-4b599bb6fa72)
 
