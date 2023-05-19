@@ -44,4 +44,5 @@ Following shows how to implement it by Azure Data Factory.
 ![image](https://github.com/RicZhou-MS/DocLibrary/assets/75886466/0f0c9b50-eeea-4bc5-ac80-b84b15b699f0)
 19. Click **Publish all** to save the pipleline configuration, and click **Debug** to test if the copy can be performed successfully as expected. 
 ![image](https://github.com/RicZhou-MS/DocLibrary/assets/75886466/ee51ccd1-1804-4ebc-bcaf-4b599bb6fa72)
+![image](https://github.com/RicZhou-MS/DocLibrary/assets/75886466/0e7f3e7b-c33f-4405-975a-3661be8671c4)
 
