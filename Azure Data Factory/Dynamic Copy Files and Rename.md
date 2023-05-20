@@ -6,7 +6,7 @@ This document shows the ADF steps that can implement following requirements
 ![image](https://github.com/RicZhou-MS/DocLibrary/assets/75886466/bbf25e73-a21d-4eb8-85b9-1f6e560ffbed)
 4. Column `sourcefile` indicates which files (with path) need to be copied from source blob storage container (`adfsource05/sourcecontainer` in above step 1) to target blob storage container (`adfstarget06/targetcontainer` in above step 2), column `targetname` indicates the renamed file name once copied to target container. 
 
-Following shows how to implement it by Azure Data Factory.
+**Following shows how to implement it by Azure Data Factory.
 1. Go to ADF and create a pipleline with name `DynamicCopyAndRename`, and drag the **Lookup** activity onto the canvas, and give the name as `LookupMySQLTable`.
 2. click the **settings** tab of the Lookup acitivity and add a new Azure MySQL dataset with corresponding MySQL link service like following
 ![image](https://github.com/RicZhou-MS/DocLibrary/assets/75886466/c8fa9365-f231-408e-8850-ae8be3d7a862)
@@ -15,7 +15,7 @@ Following shows how to implement it by Azure Data Factory.
 ![image](https://github.com/RicZhou-MS/DocLibrary/assets/75886466/0a89aa85-0993-4d9f-8d81-389b591e1fa5)
 4. Add a **ForEach** activity and connect behind the lookup activity, give the name as `ForEachQueryRow`. at the **settings** tab, check **Sequential** and click **Add dynamic content** at **Items** field, add dynamic content as following capture.
 ![image](https://github.com/RicZhou-MS/DocLibrary/assets/75886466/b2af4e61-b628-49bf-a90e-f9da9126bf46)
-5. Click add **Activities** icon inside ForEach activity, and select **Copy Data** activity to add into ForEach. 
+5. Click "**+**" **Activities** icon inside **ForEach** activity, and select **Copy Data** activity to add into **ForEach**. 
 6. Click this copy data activity and go to **Sources** tab, add **Azure Blob Storage** dataset with **Binary** file format (NOTE: you can choose other file format which aligns with your scenario), and create associated blob linked service which pointing to the source blob storage account `adfsource05` and save.
 ![image](https://github.com/RicZhou-MS/DocLibrary/assets/75886466/eee80fad-58ab-4165-936f-ecdcb92c3b5f)
 7. Click the **Open** button to reopen the dataset setting page
